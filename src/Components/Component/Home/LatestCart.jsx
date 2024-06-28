@@ -1,41 +1,27 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { CardActionArea, Divider, Box, Button, Avatar } from "@mui/material";
-import { AccessTime, Comment } from "@mui/icons-material";
+import { CardActionArea, Box, Avatar } from "@mui/material";
+import { AccessTime } from "@mui/icons-material";
 
-function LatestCart({ topic, description, author, time }) {
+function LatestCart({ description, author, time }) {
   return (
     <Card
       sx={{
-        maxWidth: 200,
+        maxWidth: 300,
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
         height: "100%",
         borderRadius: "10px",
+        margin: '2px',  
       }}
     >
       <CardActionArea>
         <CardContent>
-          <Typography
-            gutterBottom
-            variant="h6"
-            component="div"
-            sx={{
-              background: "linear-gradient(to right, #ff7e5f, #feb47b)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              fontWeight: "bold",
-            }}
-          >
-            {topic}
-          </Typography>
-
           <Typography variant="body2" color="text.secondary">
-            {description }
+            {description}
           </Typography>
 
           <Box
